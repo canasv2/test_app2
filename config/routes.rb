@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'about',to: 'pages#about'
 
   resources :articles
+
+  get 'singup', to: 'users#new'
+  resources :users, except: [:new]
 end
